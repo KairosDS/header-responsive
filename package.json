@@ -1,0 +1,38 @@
+{
+  "name": "@kairos_ds/header-responsive",
+  "description": "Lit-Element webcomponent header-responsive",
+  "version": "1.0.0",
+  "main": "header-responsive.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kairosds/header-responsive"
+  },
+  "author": "KairosDS Team",
+  "license": "Apache-2.0",
+  "keywords": [
+    "webcomponent",
+    "lit-element"
+  ],
+  "bugs": {
+    "url": "https://github.com/KairosDS Team/header-responsive/issues"
+  },
+  "homepage": "https://github.com/KairosDS Team/header-responsive",
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-proposal-decorators": "^7.12.12",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "es-dev-server": "^2.1.0",
+    "rollup": "^2.38.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "scripts": {
+    "build": "rm -rf build && mkdir build && rollup -c",
+    "start": "es-dev-server --app-index /demo/index.html --node-resolve --watch --open"
+  }
+}
