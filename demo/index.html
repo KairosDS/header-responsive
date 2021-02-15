@@ -29,6 +29,25 @@
       header-responsive {
         width:12rem;
       }
+      navigation-menu::part(nav-bar) {
+        background-color: blue;
+      }
+      .logo--container {
+        width: 150px;
+        height: 40px;
+        background-color: brown;
+      }
+      .navMenu{
+         min-height: 80%;
+          background-color: burlywood;
+        }
+      @media all and (min-width: 1024px) {
+        .navMenu{
+          min-width: 700px;
+          min-height: initial;
+          background-color: burlywood;
+        }
+      }
     </style>
   </head>
 
@@ -49,7 +68,12 @@
           </ul>
         </pre>
       </div>
-      <header-responsive></header-responsive>
+      <h1>Header Responsive</h1>
+      <header-responsive .itemsSlots ="['navigationMenu', 'buttonLanguage']">
+        <div slot="logo" id="logo" class="logo--container"><a href="/">Logo</a></div>
+        <div class="navMenu" slot="navigationMenu"></div>
+        <div id="buttons-language" slot="buttonLanguage">EN ES</div>
+      </header-responsive>
     </div>
   </body>
 </html>

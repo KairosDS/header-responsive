@@ -5,7 +5,7 @@ export const HeaderResponsiveStyles = css`
     width: 100%;
   }
  
-  header{
+  .header__container{
     width: 100%;
     height: 60px;
     background-color: rgba(255, 255, 255);
@@ -40,11 +40,11 @@ export const HeaderResponsiveStyles = css`
     background-image: url(/assets/images/menu-nav-close.svg);
   }
 
-  .header__input:checked ~ .header--container {
+  .header__input:checked ~ .header--container--items {
     right: 0;
   }
 
-  .header--container {
+  .header--container--items {
     width: 92vw;
     height: 90vh;
     cursor: hand;
@@ -56,15 +56,15 @@ export const HeaderResponsiveStyles = css`
     font-size: 16px;
   }
   @media all and (min-width: 1024px) {
-    header {
+    .header__container {
+      flex-direccion: row;
       justify-content: space-between;
       height: 60px;
-      justify-content: center;
     }
     .header-menu-icon {
        display: none;
     }
-    .header--container{
+    .header--container--items {
       width: 900px;
       height: 100%;
       position: static;

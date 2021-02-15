@@ -26,6 +26,7 @@ export class HeaderResponsive extends LitElement {
 
   constructor() {
     super();
+    
   }
 
   connectedCallback() {
@@ -34,15 +35,19 @@ export class HeaderResponsive extends LitElement {
 
   render() {
     return html`
-    <header>
+    <div class="header__container">
         <input type="checkbox" class="header__input" id="toggleOpen" />
         <label tabindex="0" class="header-menu-icon" for="toggleOpen"></label>
-        <div class="header--container">
-          <li>hahahaha</li>
-          <li>hahaha</li>
-          <li>hahahah</li>
+        <slot name="logo"></slot>
+        <div class="header--container--items">
+          <slot name ="navigationMenu"></slot>
+          <slot name= "buttonLanguage"></slot>
         </div>
-    </header>
+    </div>
     `;
   }
 }
+
+
+
+
