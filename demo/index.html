@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script type="module" src="../header-responsive.js"></script>
     <style>
+      body {
+        margin: 0;
+      }
       .blocks {
         display:flex;
         flex-direction:row;
@@ -26,26 +29,32 @@
         padding-left: 20px;
       }
 
-      header-responsive {
-        width:12rem;
-      }
-      navigation-menu::part(nav-bar) {
-        background-color: blue;
-      }
       .logo--container {
         width: 150px;
         height: 40px;
-        background-color: brown;
+        background-color: rgb(224, 136, 28);
       }
       .navMenu{
-         min-height: 80%;
-          background-color: burlywood;
-        }
+        width: 100%;
+        height: 100%;
+        background-color: rgb(70, 69, 69);
+      }
+      .buttons-lang {
+        width: 100%;
+        background-color: rgb(254, 254, 254);
+      }
+
       @media all and (min-width: 1024px) {
+        .buttons-lang {
+          height: 100%;
+          width: fit-content;
+          display: flex;
+          align-items: center;
+          background-color: rgb(250, 250, 250);
+        }
         .navMenu{
-          min-width: 700px;
-          min-height: initial;
-          background-color: burlywood;
+          width: 900px;
+          height: 100%;
         }
       }
     </style>
@@ -68,11 +77,11 @@
           </ul>
         </pre>
       </div>
-      <h1>Header Responsive</h1>
-      <header-responsive .itemsSlots ="['navigationMenu', 'buttonLanguage']">
+      <h2>Header Responsive</h2>
+      <header-responsive>
         <div slot="logo" id="logo" class="logo--container"><a href="/">Logo</a></div>
-        <div class="navMenu" slot="navigationMenu"></div>
-        <div id="buttons-language" slot="buttonLanguage">EN ES</div>
+        <div class="navMenu" slot="navigationMenu">MENU NAVEGACIÓN</div>
+        <div  class="buttons-lang" id="buttons-language" slot="buttonLanguage">EN ES</div>
       </header-responsive>
     </div>
   </body>

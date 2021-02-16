@@ -2,3 +2,4 @@
 *.polymer
 /build/
 /dist/
+/coverage/

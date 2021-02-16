@@ -15,7 +15,8 @@ export const HeaderResponsiveStyles = css`
     top: 0px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding-left: 15px;
+    box-sizing: border-box;
   }
 
   .header-menu-icon {
@@ -54,24 +55,34 @@ export const HeaderResponsiveStyles = css`
     background-color: #464545;
     transition: all 0.75s ease;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    
   }
   @media all and (min-width: 1024px) {
     .header__container {
       flex-direccion: row;
-      justify-content: space-between;
       height: 60px;
+      padding: 0 9%;
+      
     }
+
     .header-menu-icon {
        display: none;
     }
+  
+
     .header--container--items {
-      width: 900px;
+      width: 100%;
       height: 100%;
       position: static;
       transition: none;
       background-color: transparent;
       display: flex;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
     }
   }
 
